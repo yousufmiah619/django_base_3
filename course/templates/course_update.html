@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD COURSE</title>
+</head>
+<body>
+    <H2>new course add</H2>
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    <form action="{% url 'update_course' id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+    <!--    <label for="name">name : </label>
+        <input type="text" value="{{name}}"  id="name" name="name">
+        <br><br>
+        <label for="age">age : </label>
+        <input type="number" value="{{age}}" id="age" name="age">
+        <br><br>
+        <label for="course">course : </label>
+        <input type="text" value="{{course}}" id="course" name="course">
+        <br><br>   -->
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

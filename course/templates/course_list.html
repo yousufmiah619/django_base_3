@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show course</title>
+</head>
+<body>
+    <h2>course list</h2>
+    {% if data %}
+    <ul>
+        {% for info in data %}
+        <li> ID : {{info.id}} </li>
+        <li> Name : {{info.name}}  </li>
+        <li> Age  {{info.age}} </li>
+        <li> course : {{info.course}} </li>
+        <br><br>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No data found</h3>
+    {% endif %}
+</body>
+</html>
