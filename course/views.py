@@ -6,7 +6,7 @@ from django.contrib import messages
 # Create your views here.
 def add_course(request):
     if request.method == "POST":
-        form = CourseForm(request.POST)
+        form = CourseForm(request.POST , request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request,"course added successfully")

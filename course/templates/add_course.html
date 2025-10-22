@@ -12,7 +12,7 @@
         <p>{{message}}</p>
     {% endfor %}
     {% endif %}
-    <form action="{% url 'add_course' %}" method="post">
+    <form action="{% url 'add_course' %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form.as_p}}
         <!--<label for="name">name : </label>

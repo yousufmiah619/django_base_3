@@ -5,6 +5,7 @@ class Course (models.Model):
     name=models.CharField(max_length=100)
     age=models.IntegerField(null=True)
     course=models.CharField(max_length=100)
+    image=models.ImageField(upload_to='course_images/', null=True, blank=True)
     create_at=models.DateTimeField(auto_now_add=True)
     
     
