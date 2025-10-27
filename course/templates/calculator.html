@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Claculator</h1>
+    <p><img src="{% static 'image/yousuf.jpg' %}" alt="yousuf" hight=100 width=100></p>
+    <br><br>
+    <form action="{% url 'calculator' %}" method="post">
+        {% csrf_token %}
+        <label>value1</label>
+        <input type="number" name="num1" class="form-control">
+        <br><br>
+        <label for="">operator</label>
+        <select name="operation" class="form-control">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br><br>
+        <label for="">value2</label>
+        <input type="number" name="num2" class="form-control"> 
+        <br><br>
+        <button type="submit">calculate</button>
+        <br><br>
+        <label for="">output</label>
+        <input type="number" class="form-control" value="{{result}}">
+
+    </form>
+        
+</body>
+</html>

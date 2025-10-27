@@ -42,7 +42,7 @@ def course_list(request):
         return render (request,"course_list.html",context)
     else:
         return HttpResponse("no data found")
-    return render (request,"add_course.html")
+  #  return render (request,"add_course.html")
 
 def update_course(request,id):
     try:
@@ -90,5 +90,28 @@ def delete_course(request,id):
         return HttpResponse(f"{id} {e}")
     info.delete()
     messages.success(request,"course delete successfully")
-    return redirect ("delete_course", id=info.id)
+    return redirect (request,"course-list")
     
+    
+def calculator(request):
+    try:
+        result=0
+        if request.method=="POST":
+            num1=eval(request.POST.get("num1"))
+            num2=eval(request.POST.get("num2"))
+            operation=request.POST.get("operation")
+            if operation=="+":
+                result=num1+num2
+            elif operation=="-":
+                result=num1-num2
+            elif operation=="*":
+                result=num1*num2
+            elif operation=="/":
+                result=num1/num2    
+            print(result)
+
+    except Exception as e :
+        print(e)                                                                                                                            
+        return HttpResponse(f"{e}")
+    
+    return render (request,"calculator.html",{"result":result})

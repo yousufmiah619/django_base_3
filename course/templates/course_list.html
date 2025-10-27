@@ -10,12 +10,20 @@
     {% if data %}
     <ul>
         {% for info in data %}
-        <li> ID : {{info.id}} </li>
-        <li> Name : {{info.name}}  </li>
-        <li> Age  {{info.age}} </li>
-        <li> course : {{info.course}} </li>
-        <li><img src="{{ info.image.ulr }}" alt=""></li>
-        <br><br>
+            <li> ID : {{info.id}} </li> 
+            <div>
+            <li>
+                {% if info.image %}
+                    <img src="{{ info.image.url }}" alt="course.name" hight=200 width="100"/>
+                {% else %}
+                   <p>no image available</p> 
+                {% endif %}
+            </li>
+            </div>
+            <li> Name : {{info.name}}  </li>
+            <li> Age  {{info.age}} </li>
+            <li> course : {{info.course}} </li>
+            <br><br>
         {% endfor %}
     </ul>
     {% else %}
