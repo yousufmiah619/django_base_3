@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% comment %} {% load static %} {% endcomment %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/add_course.css' %}"> {% endcomment %}
+</head>
+<body>
+    {% comment %} <header>
+        <ul>
+            <a href="">Home</a>
+            <a href="">Login</a>
+            <a href="">Registration</a>
+        </ul>
+    </header>
+    <h1>this is a registration form</h1> {% endcomment %}
+    <H2>Login</H2>
+    <form action="{% url 'signin' %}"  method="post">
+        {% csrf_token %}
+        <label for="Username">Username :</label>
+        <input type="text" id="username" name="username" placeholder="Enter Your username">
+        <br><br>
+        {% comment %} <label for="email">Email :</label>
+        {{ form.email }}
+        <br><br> {% endcomment %}
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" placeholder="Enter Your password">
+        <br><br>
+        {% comment %} <label for="password2">Confirm Password :</label>
+        {{ form.password2 }}
+        <br><br>
+        <label for="fast-name">Fast-name :</label>    
+        <input type="text" id="fast-name" name="fast-name" placeholder="Your fast name">
+        <br><br>
+        <label for="last-name">Last-name :</label>  
+        <input type="text" id="last-name" name="last-name" placeholder="Your last name">
+        <br><br>  
+        <label for="number">Phone Number :</label>
+        <input type="text" id="number" name="number" placeholder="+8801*********">  
+        <br><br> 
+        <!--<label for="name">name : </label> {% endcomment %}
+        {% comment %} <input type="text" id="name" name="name">
+        <br><br>
+        <label for="age">age : </label>
+        <input type="number" id="age" name="age">
+        <br><br>
+        <label for="course">course : </label>
+        <input type="text" id="course" name="course"> {% endcomment %}
+        {% comment %} <br><br> --> {% endcomment %}
+        <button>submit</button>
+    </form>
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{message}}</p>
+    {% endfor %}
+    {% endif %}
+</body>
+{% comment %} </html>{% extends 'base.html' %} {% endcomment %}
+
+
+{% comment %} {% block content %}
+    
+{% endblock %} {% endcomment %}

@@ -1,13 +1,46 @@
-body{
-    background-color: aqua;
+body {
+    background-image: url("../image/123asd.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;    
+}
+a{
+    color:rgb(253, 254, 255);                                                            
+}
+h1{
     text-align: center;
- 
+    color: rgb(252, 246, 246);
+}
+
+h2{
+    text-align: center;
+    color: rgb(18, 219, 52);
+}
 form{
+    margin: auto;
     text-align: center;
-    justify-content: center;
     border: 2px solid black;
-    width: 300px;
-    height: 250px;
-    align-items:center; 
-    text-align: center ;   
+    width: 350px;
+    height: 380px;
+    padding: 10px;  
+   /* background-color: lightgray; */
+
+}
+label{
+    padding: 5px;
+    color: rgb(254, 253, 253);
+}
+input{
+    color: black;
+    padding: 5px;  
+}
+meassage{
+    color: red;
+    font-size: 14px;
 }

@@ -6,13 +6,14 @@
     <title>ADD COURSE</title>
 </head>
 <body>
+    
     <H2>new course add</H2>
     {% if messages %}
     {% for message in messages %}
         <p>{{message}}</p>
     {% endfor %}
     {% endif %}
-    <form action="{% url 'update_course' id %}" method="post">
+    <form action="{% url 'update_course' id %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form.as_p}}
     <!--    <label for="name">name : </label>

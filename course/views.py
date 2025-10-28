@@ -115,3 +115,6 @@ def calculator(request):
         return HttpResponse(f"{e}")
     
     return render (request,"calculator.html",{"result":result})
+
+def home(request):
+    return render (request,"home.html")

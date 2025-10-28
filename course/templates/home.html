@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/add_course.css' %}"> {% endcomment %}
+</head>
+<body>
+    <h1>Welcome to the Student Course Home Page</h1>
+    <p>This is the home page for students to access their courses.</p>  
+    <img src="{% static 'image/yousuf.jpg' %}" alt="yousuf" hight="300" width="400">
+    {% comment %} <form action="">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="age">age</label>
+        <input type="number" id="age" name="age">
+        <br><br>
+        <label for="course">course</label>
+        <input type="text" id="course" name="course">
+        <br><br>
+        <button>submit</button>
+    </form> {% endcomment %}
+</body>
+</html>
