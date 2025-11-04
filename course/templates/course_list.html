@@ -29,5 +29,8 @@
     {% else %}
     <h3>No data found</h3>
     {% endif %}
+{% if user.is_authenticate %}
+    <a href="{% url 'logout' %}">Logout</a>
+{% endif %}
 </body>
 </html>

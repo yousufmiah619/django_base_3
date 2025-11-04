@@ -6,8 +6,12 @@
     <title>my site</title>
 </head>
 <body>
+    <a href="{{% url 'logout' %}}">Logout</a>
     {% block content %}
+    
     {% endblock %}
+    <br><br><br>
+    
     <footer></footer>
 </body>
 </html>

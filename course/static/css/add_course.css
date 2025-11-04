@@ -8,10 +8,11 @@ header{
     display: flex;
     justify-content: right;
     align-items: center;
-    padding: 20px;    
+    padding: 20px;
+    color:black    
 }
 a{
-    color:rgb(253, 254, 255);                                                            
+    color:rgb(0, 5, 9);                                                            
 }
 h1{
     text-align: center;

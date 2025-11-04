@@ -27,5 +27,8 @@
         <br><br>   -->
         <button type="submit">submit</button>
     </form>
+    {% if user.is_authenticate %}
+    <a href="{% url 'logout' %}">logout</a>
+    {% endif %}
 </body>
 </html>

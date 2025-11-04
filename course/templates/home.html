@@ -8,6 +8,12 @@
     {% comment %} <link rel="stylesheet" href="{% static 'css/add_course.css' %}"> {% endcomment %}
 </head>
 <body>
+    <header>
+        <a href="{% url 'course_list' %}">course_list</a>
+        <a href="{% url 'add_course' %}">add_course</a>
+        <a href="{% url 'calculator'%}">calculator</a>
+
+    </header>
     <h1>Welcome to the Student Course Home Page</h1>
     <p>This is the home page for students to access their courses.</p>  
     <img src="{% static 'image/yousuf.jpg' %}" alt="yousuf" hight="300" width="400">
@@ -23,5 +29,10 @@
         <br><br>
         <button>submit</button>
     </form> {% endcomment %}
+    <br><br><br><br><br>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+    {% endif %}
+    
 </body>
 </html>

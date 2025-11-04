@@ -32,6 +32,10 @@
         <input type="number" class="form-control" value="{{result}}">
 
     </form>
-        
+    <br>
+    <a href="{% url 'logout' %}">logout</a>
+    {% if user.is_authenticate %}
+        <a href="{% url 'logout' %}">logout</a>
+    {% endif %}
 </body>
 </html>
